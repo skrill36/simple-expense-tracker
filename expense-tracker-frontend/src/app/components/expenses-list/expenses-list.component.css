@@ -1,0 +1,38 @@
+.attribute-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.attribute-list li {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.attribute-name {
+  font-weight: bold;
+}
+
+.attribute-description {
+  color: #555;
+}
+
+.attribute-amount {
+  color: #0066cc;
+}
+
+.attribute-date {
+  font-style: italic;
+}
+
+.demo-table {
+  width: 100%;
+}
+
+.demo-button-container {
+  padding-bottom: 16px;
+}
+
+.demo-button + .demo-button {
+  margin-left: 8px;
+}

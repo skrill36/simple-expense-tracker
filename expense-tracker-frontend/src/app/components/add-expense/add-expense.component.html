@@ -1,0 +1,68 @@
+<mat-card style="text-align: center; margin: 1rem auto; padding: 1rem">
+  <mat-card-header>
+    <div class="col-md-12">
+      <div class="col-md-6">
+        <mat-form-field>
+          <mat-label>Expense Name</mat-label>
+          <input type="text" name="expense" matInput [(ngModel)]="exName" />
+        </mat-form-field>
+      </div>
+
+      <div class="col-md-6">
+        <mat-form-field>
+          <mat-label>Description</mat-label>
+          <textarea
+            type="text"
+            name="description"
+            matInput
+            [(ngModel)]="exDesc"
+          ></textarea>
+        </mat-form-field>
+      </div>
+
+      <div class="col-md-6">
+        <div class="col-md-6">
+          <mat-form-field>
+            <mat-label>Amount</mat-label>
+            <input type="text" name="amount" matInput [(ngModel)]="exAmount" />
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="col-md-6" style="margin-bottom: 30px">
+        <mat-form-field>
+          <mat-label>Choose a date</mat-label>
+          <input
+            type="text"
+            name="date"
+            matInput
+            [(ngModel)]="exDate"
+            [matDatepicker]="picker"
+          />
+          <mat-hint>MM/DD/YYYY</mat-hint>
+          <mat-datepicker-toggle
+            matIconSuffix
+            [for]="picker"
+          ></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="col-md-12"></div>
+  </mat-card-header>
+  <mat-card-actions align="end">
+    <button mat-raised-button color="primary" (click)="submitData()">
+      Submit
+    </button>
+    <button
+      style="margin-left: 15px; padding-right: 10px"
+      mat-raised-button
+      color="warn"
+      (click)="cancelData()"
+    >
+      Cancel
+    </button>
+  </mat-card-actions>
+
+</mat-card>
